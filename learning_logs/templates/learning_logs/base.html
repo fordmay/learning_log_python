@@ -1,7 +1,16 @@
 <!--The Parent Template-->
-<p>
-    <a href="{% url 'learning_logs:index' %}">Learning Log</a> -
-    <a href="{% url 'learning_logs:topics' %}">Topics</a>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Learning Log{% endblock %}</title>
+</head>
+<body>
+    <p>
+        <a href="{% url 'learning_logs:index' %}">Learning Log</a> -
+        <a href="{% url 'learning_logs:topics' %}">Topics</a>
+    </p>
 
-{% block content %}{% endblock content %}
+    {% block content %}{% endblock content %}
+</body>
+</html>
